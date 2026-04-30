@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 72" fill="none">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="110" y2="72" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#D4A832"/>
+      <stop offset="50%"  stop-color="#B8922E"/>
+      <stop offset="100%" stop-color="#96751F"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── A HARFİ ── -->
+  <!-- Sol dış bacak -->
+  <line x1="4"  y1="64" x2="32" y2="6"  stroke="url(#g)" stroke-width="3"   stroke-linecap="round"/>
+  <!-- Sol iç bacak (paralel) -->
+  <line x1="11" y1="64" x2="32" y2="13" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- Ortak omurga / A sağ bacak + K dikey (dış) -->
+  <line x1="32" y1="6"  x2="44" y2="64" stroke="url(#g)" stroke-width="3"   stroke-linecap="round"/>
+  <!-- Ortak omurga iç -->
+  <line x1="32" y1="13" x2="38" y2="64" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- A yatay çubuğu dış -->
+  <line x1="14" y1="40" x2="38" y2="40" stroke="url(#g)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- A yatay çubuğu iç -->
+  <line x1="16" y1="46" x2="36" y2="46" stroke="url(#g)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- ── K HARFİ ── -->
+  <!-- K üst kol dış -->
+  <line x1="32" y1="6"  x2="72" y2="6"  stroke="url(#g)" stroke-width="3"   stroke-linecap="round"/>
+  <!-- K üst kol iç (paralel, biraz aşağıda) -->
+  <line x1="32" y1="13" x2="72" y2="13" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- K alt kol dış (omurgadan sağ-aşağı) -->
+  <line x1="44" y1="35" x2="72" y2="64" stroke="url(#g)" stroke-width="3"   stroke-linecap="round"/>
+  <!-- K alt kol iç (paralel) -->
+  <line x1="40" y1="35" x2="66" y2="64" stroke="url(#g)" stroke-width="1.8" stroke-linecap="round"/>
+
+  <!-- ── DEVRELERCİRCUIT NOKTALARI ── -->
+  <!-- A tepesi -->
+  <circle cx="32" cy="6"  r="3"   fill="url(#g)"/>
+  <!-- K üst sağ köşe -->
+  <circle cx="72" cy="6"  r="3"   fill="url(#g)"/>
+  <!-- K alt sağ köşe -->
+  <circle cx="72" cy="64" r="3"   fill="url(#g)"/>
+  <!-- A sol alt -->
+  <circle cx="4"  cy="64" r="3"   fill="url(#g)"/>
+  <!-- Omurga alt -->
+  <circle cx="44" cy="64" r="3"   fill="url(#g)"/>
+  <!-- K kırılma noktası -->
+  <circle cx="44" cy="35" r="2.5" fill="url(#g)"/>
+
+  <!-- Devre izleri — küçük yatay çıkıntılar -->
+  <line x1="4"  y1="64" x2="4"  y2="56" stroke="url(#g)" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="4" cy="56" r="1.3" fill="url(#g)" opacity="0.55"/>
+
+  <line x1="72" y1="6"  x2="80" y2="6"  stroke="url(#g)" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="80" cy="6" r="1.3" fill="url(#g)" opacity="0.55"/>
+
+  <line x1="72" y1="64" x2="80" y2="64" stroke="url(#g)" stroke-width="1.2" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="80" cy="64" r="1.3" fill="url(#g)" opacity="0.55"/>
+
+  <!-- A içi devre halkası -->
+  <circle cx="22" cy="34" r="4.5" stroke="url(#g)" stroke-width="1.2" fill="none" opacity="0.45"/>
+  <circle cx="22" cy="34" r="1.5" fill="url(#g)" opacity="0.45"/>
+</svg>

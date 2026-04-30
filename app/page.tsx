@@ -1,65 +1,130 @@
-import Image from "next/image";
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import HowIWork from "@/components/HowIWork";
+import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    /* ── Person ── */
+    {
+      "@type": "Person",
+      "@id": "https://aleynaayturkkorkmaz.com/#person",
+      name: "Aleyna Aytürk Korkmaz",
+      url: "https://aleynaayturkkorkmaz.com",
+      email: "ayturkkorkmazz@gmail.com",
+      telephone: "+905523507807",
+      jobTitle: "CRM Danışmanı & Dijital Çözüm Uzmanı",
+      description:
+        "CRM kurulum & yönetim, web sitesi geliştirme ve otomasyon entegrasyonu konularında uzaktan, global hizmet sunan dijital danışman.",
+      knowsAbout: [
+        "CRM Systems",
+        "HubSpot",
+        "Salesforce",
+        "Zoho CRM",
+        "Digital Transformation",
+        "Workflow Automation",
+        "Zapier",
+        "Make (Integromat)",
+        "Web Development",
+        "Next.js",
+        "API Integration",
+      ],
+      knowsLanguage: ["tr", "en"],
+      sameAs: [],
+    },
+    /* ── ProfessionalService ── */
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://aleynaayturkkorkmaz.com/#service",
+      name: "Aleyna Aytürk Korkmaz — Dijital Danışmanlık",
+      url: "https://aleynaayturkkorkmaz.com",
+      email: "ayturkkorkmazz@gmail.com",
+      telephone: "+905523507807",
+      description:
+        "CRM kurulum & yönetim, web sitesi geliştirme, otomasyon ve API entegrasyonu, dijital dönüşüm danışmanlığı.",
+      areaServed: {
+        "@type": "Place",
+        name: "Worldwide",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Dijital Danışmanlık Hizmetleri",
+        itemListElement: [
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "CRM Kurulum & Yönetim",
+              description:
+                "HubSpot, Salesforce, Zoho ve diğer CRM sistemlerinin kurulum, özelleştirme ve optimizasyonu.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Web Sitesi Tasarım & Geliştirme",
+              description:
+                "Kurumsal web siteleri ve landing page'ler. Hızlı, mobil uyumlu ve SEO-ready.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Otomasyon & Entegrasyon",
+              description:
+                "Zapier ve Make ile iş akışı otomasyonu. Sistemler arası API entegrasyonları.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Dijital Danışmanlık",
+              description:
+                "Dijital dönüşüm stratejisi, süreç analizi, teknoloji seçimi ve roadmap oluşturma.",
+            },
+          },
+        ],
+      },
+      provider: { "@id": "https://aleynaayturkkorkmaz.com/#person" },
+    },
+    /* ── WebSite ── */
+    {
+      "@type": "WebSite",
+      "@id": "https://aleynaayturkkorkmaz.com/#website",
+      url: "https://aleynaayturkkorkmaz.com",
+      name: "Aleyna Aytürk Korkmaz",
+      description: "CRM Danışmanı & Dijital Çözüm Uzmanı",
+      inLanguage: ["tr-TR", "en-US"],
+      publisher: { "@id": "https://aleynaayturkkorkmaz.com/#person" },
+    },
+  ],
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Navigation />
+      <main>
+        <Hero />
+        <Services />
+        <HowIWork />
+        <About />
+        <Contact />
       </main>
-    </div>
+      <Footer />
+      <WhatsAppButton />
+    </>
   );
 }
