@@ -9,9 +9,6 @@ export default function Footer() {
   return (
     <footer className="px-6 py-10" style={{ background:"var(--surface)", borderTop:"1px solid var(--border)" }}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-        <a href="#" className="flex-shrink-0">
-          <img src="/logo.svg" alt="AK Logo" width={48} height={38} />
-        </a>
         <nav className="flex items-center gap-6 flex-wrap justify-center">
           {[
             { label: lang==="tr"?"Hizmetler":"Services", href:"#hizmetler" },
