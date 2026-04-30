@@ -5,7 +5,6 @@ import HowIWork from "@/components/HowIWork";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -17,7 +16,6 @@ const jsonLd = {
       name: "Aleyna Aytürk Korkmaz",
       url: "https://aleynaayturkkorkmaz.com",
       email: "ayturkkorkmazz@gmail.com",
-      telephone: "+905523507807",
       jobTitle: "CRM Danışmanı & Dijital Çözüm Uzmanı",
       description:
         "CRM kurulum & yönetim, web sitesi geliştirme ve otomasyon entegrasyonu konularında uzaktan, global hizmet sunan dijital danışman.",
@@ -44,7 +42,6 @@ const jsonLd = {
       name: "Aleyna Aytürk Korkmaz — Dijital Danışmanlık",
       url: "https://aleynaayturkkorkmaz.com",
       email: "ayturkkorkmazz@gmail.com",
-      telephone: "+905523507807",
       description:
         "CRM kurulum & yönetim, web sitesi geliştirme, otomasyon ve API entegrasyonu, dijital dönüşüm danışmanlığı.",
       areaServed: {
@@ -124,7 +121,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-      <WhatsAppButton />
     </>
   );
 }
