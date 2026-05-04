@@ -94,7 +94,7 @@ export const metadata: Metadata = {
 
   /* ── Verification placeholders ── */
   verification: {
-    google: "GOOGLE_SEARCH_CONSOLE_ID_BURAYA",
+    google: "1TFdrruxJVF6hB_8-n_a8tA9GQlUqI3az5hjzkihfpQ",
   },
 
   /* ── Diğer ── */
