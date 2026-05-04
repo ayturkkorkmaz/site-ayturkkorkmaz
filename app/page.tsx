@@ -33,7 +33,9 @@ const jsonLd = {
         "API Integration",
       ],
       knowsLanguage: ["tr", "en"],
-      sameAs: [],
+      sameAs: [
+        "https://www.linkedin.com/in/aleynaayt%C3%BCrkkorkmaz",
+      ],
     },
     /* ── ProfessionalService ── */
     {
