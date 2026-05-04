@@ -9,7 +9,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const BASE_URL = "https://aleynaayturkkorkmaz.com";
+const BASE_URL = "https://ayturkkorkmaz.com.tr";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

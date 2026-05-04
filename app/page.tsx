@@ -12,9 +12,9 @@ const jsonLd = {
     /* ── Person ── */
     {
       "@type": "Person",
-      "@id": "https://aleynaayturkkorkmaz.com/#person",
+      "@id": "https://ayturkkorkmaz.com.tr/#person",
       name: "Aleyna Aytürk Korkmaz",
-      url: "https://aleynaayturkkorkmaz.com",
+      url: "https://ayturkkorkmaz.com.tr",
       email: "ayturkkorkmazz@gmail.com",
       jobTitle: "CRM Danışmanı & Dijital Çözüm Uzmanı",
       description:
@@ -38,9 +38,9 @@ const jsonLd = {
     /* ── ProfessionalService ── */
     {
       "@type": "ProfessionalService",
-      "@id": "https://aleynaayturkkorkmaz.com/#service",
+      "@id": "https://ayturkkorkmaz.com.tr/#service",
       name: "Aleyna Aytürk Korkmaz — Dijital Danışmanlık",
-      url: "https://aleynaayturkkorkmaz.com",
+      url: "https://ayturkkorkmaz.com.tr",
       email: "ayturkkorkmazz@gmail.com",
       description:
         "CRM kurulum & yönetim, web sitesi geliştirme, otomasyon ve API entegrasyonu, dijital dönüşüm danışmanlığı.",
@@ -90,17 +90,17 @@ const jsonLd = {
           },
         ],
       },
-      provider: { "@id": "https://aleynaayturkkorkmaz.com/#person" },
+      provider: { "@id": "https://ayturkkorkmaz.com.tr/#person" },
     },
     /* ── WebSite ── */
     {
       "@type": "WebSite",
-      "@id": "https://aleynaayturkkorkmaz.com/#website",
-      url: "https://aleynaayturkkorkmaz.com",
+      "@id": "https://ayturkkorkmaz.com.tr/#website",
+      url: "https://ayturkkorkmaz.com.tr",
       name: "Aleyna Aytürk Korkmaz",
       description: "CRM Danışmanı & Dijital Çözüm Uzmanı",
       inLanguage: ["tr-TR", "en-US"],
-      publisher: { "@id": "https://aleynaayturkkorkmaz.com/#person" },
+      publisher: { "@id": "https://ayturkkorkmaz.com.tr/#person" },
     },
   ],
 };
