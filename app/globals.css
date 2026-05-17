@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  /* ── Komple krem/beyaz palet ── */
-  --bg:        #faf8f4;   /* ana zemin: sıcak krem */
-  --surface:   #f3ede4;   /* bölüm: daha koyu krem */
-  --surface-2: #ede5d8;   /* kart içi / girdi */
-  --border:    rgba(180, 155, 110, 0.18); /* amber tonlu border */
+  /* ── Full dark palette ── */
+  --bg:        #07090e;
+  --surface:   #04060a;
+  --surface-2: #0c0f18;
+  --border:    rgba(255,255,255,0.1);
 
-  --gold:       #B8922E;   /* biraz daha koyu gold — krem üstünde okunur */
+  --gold:       #B8922E;
   --gold-light: #D4AB52;
-  --gold-dim:   rgba(184, 146, 46, 0.12);
+  --gold-dim:   rgba(184, 146, 46, 0.1);
 
-  --accent:     #8B6914;   /* koyu amber — ikon/label */
-  --accent-2:   #6B4F0F;
+  --accent:     #B8922E;
+  --accent-2:   #D4AB52;
 
-  --text:       #1c1814;   /* sıcak near-black */
-  --text-muted: #7a6e62;   /* warm taupe */
+  --text:       rgba(255,255,255,0.92);
+  --text-muted: rgba(255,255,255,0.44);
 }
 
 html { scroll-behavior: smooth; }
@@ -78,8 +78,8 @@ body {
   transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
 }
 .btn-outline:hover {
-  border-color: rgba(0,0,0,0.2) !important;
-  background: rgba(0,0,0,0.04) !important;
+  border-color: rgba(255,255,255,0.4) !important;
+  background: rgba(255,255,255,0.08) !important;
 }
 
 /* ── Card hover ── */
@@ -92,8 +92,8 @@ body {
 }
 .card-lift:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
-  border-color: rgba(201,168,76,0.4) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5), 0 4px 12px rgba(0,0,0,0.3);
+  border-color: rgba(255,255,255,0.2) !important;
 }
 
 /* ── Scroll reveal ── */
@@ -154,4 +154,24 @@ body {
 .sep {
   height: 1px;
   background: var(--border);
+}
+
+/* ── Marquee ── */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-strip {
+  animation: marquee-scroll 30s linear infinite;
+  width: max-content;
+}
+
+/* ── Pipeline card floating chips ── */
+@keyframes chip-a {
+  0%,100% { transform: translateY(0px); }
+  50%     { transform: translateY(-7px); }
+}
+@keyframes chip-b {
+  0%,100% { transform: translateY(0px); }
+  50%     { transform: translateY(-5px); }
 }

@@ -58,7 +58,7 @@ export default function Services() {
       <div className="sep mb-0" />
       <div className="max-w-6xl mx-auto pt-2">
         <div ref={headRef as React.RefObject<HTMLDivElement>} className="reveal mb-12 md:mb-14">
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "var(--gold)" }}>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color: "rgba(255,255,255,0.45)" }}>
             {tx.heading}
           </p>
           <h2 className="text-3xl md:text-5xl font-semibold" style={{ color: "var(--text)", letterSpacing: "-0.02em" }}>
@@ -71,16 +71,16 @@ export default function Services() {
             <div key={i}
               className="card-lift rounded-2xl p-7 cursor-default"
               style={{ background: "var(--bg)", border: "1px solid var(--border)" }}
-              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#fffdf8"; }}
+              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.06)"; }}
               onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "var(--bg)"; }}>
               <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-5"
-                style={{ background: "var(--gold-dim)", color: "var(--gold)" }}>
+                style={{ background: "rgba(255,255,255,0.07)", color: "rgba(255,255,255,0.7)" }}>
                 {icons[item.icon]}
               </div>
               <h3 className="text-lg font-semibold mb-2" style={{ color: "var(--text)" }}>{item.title}</h3>
               <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--text-muted)" }}>{item.desc}</p>
               <span className="text-xs font-medium px-3 py-1.5 rounded-full inline-block"
-                style={{ color: "var(--gold)", background: "var(--gold-dim)" }}>
+                style={{ color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)" }}>
                 {item.for}
               </span>
             </div>

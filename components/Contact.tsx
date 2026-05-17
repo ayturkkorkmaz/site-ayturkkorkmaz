@@ -22,7 +22,7 @@ export default function Contact() {
   const channels = [
     {
       label:"E-posta", value:EMAIL, href:`mailto:${EMAIL}`,
-      color:"var(--gold)", bg:"var(--gold-dim)",
+      color:"rgba(255,255,255,0.85)", bg:"rgba(255,255,255,0.07)",
       icon:(
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
           <rect x="2" y="4" width="14" height="10" rx="2" stroke="currentColor" strokeWidth="1.4"/>
@@ -40,7 +40,7 @@ export default function Contact() {
 
         {/* Left */}
         <div>
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color:"var(--gold)" }}>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color:"rgba(255,255,255,0.45)" }}>
             {lang==="tr"?"İletişim":"Contact"}
           </p>
           <h2 className="text-3xl md:text-4xl font-semibold mb-6"
@@ -75,7 +75,7 @@ export default function Contact() {
 
         {/* Right — Google Calendar */}
         <div>
-          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color:"var(--gold)" }}>
+          <p className="text-xs font-semibold tracking-[0.2em] uppercase mb-3" style={{ color:"rgba(255,255,255,0.45)" }}>
             {lang==="tr"?"Randevu Al":"Book a Meeting"}
           </p>
           <h3 className="text-2xl font-semibold mb-4" style={{ color:"var(--text)", letterSpacing:"-0.02em" }}>
