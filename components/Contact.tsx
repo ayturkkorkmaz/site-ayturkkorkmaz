@@ -86,10 +86,14 @@ export default function Contact() {
               ? "Doğrudan takvimimden müsait bir slot seç, görüşelim."
               : "Select an available slot directly from my calendar and let's talk."}
           </p>
-          <div className="rounded-2xl overflow-hidden" style={{ border:"1px solid var(--border)" }}>
+          <div className="rounded-2xl overflow-hidden" style={{ border:"1px solid var(--border)", background:"#000" }}>
             <iframe
               src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3ew4Cqu3WlbaQU1NnrAsoJ2HfUzdyCzN-0hj1qEXhnDXvQgKb7SkMUi4xQojfdCB9D4fxtQtWI?gv=true"
-              style={{ border:0, display:"block" }}
+              style={{
+                border: 0,
+                display: "block",
+                filter: "invert(1) hue-rotate(180deg)",
+              }}
               width="100%"
               height="600"
               frameBorder="0"

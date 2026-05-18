@@ -7,12 +7,12 @@
   --surface-2: #0c0f18;
   --border:    rgba(255,255,255,0.1);
 
-  --gold:       #B8922E;
-  --gold-light: #D4AB52;
-  --gold-dim:   rgba(184, 146, 46, 0.1);
+  --gold:       #2563EB;
+  --gold-light: #60A5FA;
+  --gold-dim:   rgba(37, 99, 235, 0.1);
 
-  --accent:     #B8922E;
-  --accent-2:   #D4AB52;
+  --accent:     #2563EB;
+  --accent-2:   #60A5FA;
 
   --text:       rgba(255,255,255,0.92);
   --text-muted: rgba(255,255,255,0.44);
@@ -69,7 +69,7 @@ body {
 }
 .btn-gold:hover::before { transform: translateX(120%); }
 .btn-gold:hover {
-  box-shadow: 0 4px 20px rgba(201,168,76,0.35), 0 12px 40px rgba(201,168,76,0.15);
+  box-shadow: 0 4px 20px rgba(37,99,235,0.35), 0 12px 40px rgba(37,99,235,0.15);
 }
 .btn-gold:active { transform: scale(0.97) !important; }
 
@@ -142,9 +142,9 @@ body {
   animation: word-in 0.65s cubic-bezier(0.23,1,0.32,1) both;
 }
 
-/* ── Gold gradient text ── */
+/* ── Blue gradient text ── */
 .gold-text {
-  background: linear-gradient(135deg, #C9A84C 0%, #E8C96B 50%, #C9A84C 100%);
+  background: linear-gradient(135deg, #2563EB 0%, #60A5FA 50%, #2563EB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -165,6 +165,10 @@ body {
   animation: marquee-scroll 30s linear infinite;
   width: max-content;
 }
+
+/* ── Hide scrollbar (horizontal scroll areas) ── */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
 
 /* ── Pipeline card floating chips ── */
 @keyframes chip-a {

@@ -73,7 +73,7 @@ export default function Hero() {
                 <span key={`${lang}-${i}`}
                   className={isGold ? "gold-text hero-word" : "hero-word"}
                   style={{
-                    color: isAmp ? "#D4AB52" : isGold ? undefined : "rgba(255,255,255,0.95)",
+                    color: isAmp ? "#60A5FA" : isGold ? undefined : "rgba(255,255,255,0.95)",
                     animationDelay: `${0.4 + i * 0.08}s`,
                     marginRight: i < words.length - 1 ? "0.26em" : 0,
                     animationPlayState: mounted ? "running" : "paused",
@@ -105,7 +105,7 @@ export default function Hero() {
             }}>
             <a href="#iletisim"
               className="btn-gold inline-flex items-center gap-2 text-sm font-semibold px-8 py-3.5 rounded-full"
-              style={{ background: "#B8922E", color: "#fff" }}>
+              style={{ background: "#2563EB", color: "#fff" }}>
               {tx.cta1}
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                 <path d="M2.5 7h9M8 3.5L11.5 7 8 10.5" stroke="currentColor" strokeWidth="1.6"

@@ -43,7 +43,7 @@ export default function Navigation() {
   const borderColor = "rgba(255,255,255,0.16)";
   const logoColor   = "#ffffff";
   const hoverColor  = "#ffffff";
-  const ctaBg       = "#B8922E";
+  const ctaBg       = "#2563EB";
 
   return (
     <header
