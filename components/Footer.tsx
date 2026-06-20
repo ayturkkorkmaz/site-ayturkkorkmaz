@@ -15,6 +15,9 @@ export default function Footer() {
             { label: lang==="tr"?"Süreç":"Process",      href:"#surec" },
             { label: lang==="tr"?"Hakkımda":"About",     href:"#hakkimda" },
             { label: lang==="tr"?"İletişim":"Contact",   href:"#iletisim" },
+            { label: lang==="tr"?"Sıkça Sorulan Sorular":"FAQ", href:"/sss" },
+            { label: lang==="tr"?"Vaka Çalışmaları":"Case Studies", href:"/vaka-calismalari/goldeneye-optik" },
+            { label: "Blog", href:"/blog" },
           ].map((l) => (
             <a key={l.href} href={l.href} className="text-xs"
               style={{ color:"var(--text-muted)", transition:"color 0.2s" }}
