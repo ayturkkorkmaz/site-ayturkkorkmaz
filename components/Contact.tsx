@@ -30,6 +30,16 @@ export default function Contact() {
         </svg>
       ),
     },
+    {
+      label:"LinkedIn", value:"Aleyna Aytürk Korkmaz", href:"https://www.linkedin.com/in/aleynaayt%C3%BCrkkorkmaz",
+      color:"#60A5FA", bg:"rgba(96,165,250,0.1)", external:true,
+      icon:(
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M4.5 7.5v6M4.5 4.5v.01M7.5 13.5v-4a2 2 0 0 1 4 0v4M7.5 7.5v6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"/>
+          <rect x="1.5" y="1.5" width="15" height="15" rx="2" stroke="currentColor" strokeWidth="1.4"/>
+        </svg>
+      ),
+    },
   ];
 
   return (
@@ -58,8 +68,8 @@ export default function Contact() {
           <div className="flex flex-col gap-3">
             {channels.map((ch, i) => (
               <a key={i} href={ch.href}
-                target={"external" in ch ? "_blank" : undefined}
-                rel={"external" in ch ? "noopener noreferrer" : undefined}
+                target={"external" in ch && ch.external ? "_blank" : undefined}
+                rel={"external" in ch && ch.external ? "noopener noreferrer" : undefined}
                 className="flex items-center gap-4 p-4 rounded-2xl card-lift"
                 style={{ background:"var(--surface)", border:"1px solid var(--border)", textDecoration:"none" }}>
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"

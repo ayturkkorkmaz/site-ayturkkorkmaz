@@ -20,6 +20,9 @@
 
 html { scroll-behavior: smooth; }
 
+/* ── Display serif font (service subpages) ── */
+.font-display { font-family: var(--font-display), Georgia, 'Times New Roman', serif; }
+
 body {
   background-color: var(--bg);
   color: var(--text);
@@ -178,4 +181,30 @@ body {
 @keyframes chip-b {
   0%,100% { transform: translateY(0px); }
   50%     { transform: translateY(-5px); }
+}
+
+/* ── FLIP overlay backdrop ── */
+@keyframes flipBackdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Skeleton shimmer (UltraLink page transitions) ── */
+@keyframes skeleton-shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.skeleton-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.04) 40%,
+    rgba(255,255,255,0.08) 50%,
+    rgba(255,255,255,0.04) 60%,
+    transparent 100%
+  );
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
 }

@@ -1,11 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { LangProvider } from "@/lib/LangContext";
+import { TransitionProvider } from "@/lib/transition-context";
+import PageTransitionLayout from "@/components/PageTransitionLayout";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -64,7 +73,7 @@ export const metadata: Metadata = {
     alternateLocale: "en_US",
     images: [
       {
-        url: `${BASE_URL}/og-image.png`,
+        url: `${BASE_URL}/opengraph-image`,
         width: 1200,
         height: 630,
         alt: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözüm Uzmanı | Antalya",
@@ -78,7 +87,7 @@ export const metadata: Metadata = {
     title: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözüm Uzmanı | Antalya",
     description:
       "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi dijitalde görünür yapıyorum.",
-    images: [`${BASE_URL}/og-image.png`],
+    images: [`${BASE_URL}/opengraph-image`],
   },
 
   /* ── Robots ── */
@@ -98,6 +107,15 @@ export const metadata: Metadata = {
     google: "1TFdrruxJVF6hB_8-n_a8tA9GQlUqI3az5hjzkihfpQ",
   },
 
+  /* ── Favicon / Icons ── */
+  icons: {
+    icon: [
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/logo.svg",
+    apple: "/logo.svg",
+  },
+
   /* ── Diğer ── */
   referrer: "origin-when-cross-origin",
   formatDetection: { telephone: true, email: true, address: true },
@@ -105,7 +123,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr" className={inter.variable}>
+    <html lang="tr" className={`${inter.variable} ${instrumentSerif.variable}`}>
       <head>
         {/* ── GEO meta tags ── */}
         <meta name="geo.region"      content="TR" />
@@ -117,12 +135,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="rating"          content="general" />
 
         {/* ── Favicon ── */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
       </head>
       <body>
-        <LangProvider>{children}</LangProvider>
+        <TransitionProvider>
+          <LangProvider>
+            <PageTransitionLayout>{children}</PageTransitionLayout>
+          </LangProvider>
+        </TransitionProvider>
       </body>
     </html>
   );

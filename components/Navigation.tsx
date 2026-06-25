@@ -80,10 +80,19 @@ export default function Navigation() {
         {/* Logo */}
         <a
           href="/"
-          className="flex-shrink-0 text-sm font-semibold tracking-[0.08em]"
+          className="flex-shrink-0 flex items-center gap-2.5"
           style={{ color: logoColor, transition: "color 0.4s ease", letterSpacing: "0.04em" }}
         >
-          Aytürk Korkmaz
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/logo.svg"
+            alt="Aytürk Korkmaz Logo"
+            className="w-8 h-8 rounded-full"
+            style={{
+              boxShadow: "0 0 10px rgba(96,165,250,0.35), 0 0 20px rgba(37,99,235,0.2)",
+            }}
+          />
+          <span className="text-sm font-semibold tracking-[0.08em]">Aytürk Korkmaz</span>
         </a>
 
         {/* Desktop links */}
