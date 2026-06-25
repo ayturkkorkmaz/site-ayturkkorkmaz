@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { useLang } from "@/lib/LangContext";
 import { t } from "@/lib/translations";
@@ -11,20 +11,96 @@ export default function Hero() {
   const { lang } = useLang();
   const tx = t[lang].hero;
   const [mounted, setMounted] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const glowRef = useRef<HTMLDivElement>(null);
+  const mousePos = useRef({ x: -200, y: -200 });
+  const smoothPos = useRef({ x: -200, y: -200 });
+  const visible = useRef(false);
+  const rafId = useRef<number>(0);
 
   useEffect(() => {
     const id = setTimeout(() => setMounted(true), 80);
     return () => clearTimeout(id);
   }, []);
 
+  /* ── Smooth glow follow with vibration ── */
+  useEffect(() => {
+    let alive = true;
+    let frame = 0;
+    function tick() {
+      if (!alive) return;
+      frame++;
+      const s = smoothPos.current;
+      const tgt = mousePos.current;
+      s.x += (tgt.x - s.x) * 0.15;
+      s.y += (tgt.y - s.y) * 0.15;
+
+      const el = glowRef.current;
+      if (el) {
+        if (visible.current) {
+          // Micro-jitter for vibration feel
+          const jx = (Math.sin(frame * 0.47) + Math.cos(frame * 0.31)) * 2.5;
+          const jy = (Math.cos(frame * 0.53) + Math.sin(frame * 0.37)) * 2.5;
+          // Pulsing size for organic tremor
+          const pw = 180 + Math.sin(frame * 0.08) * 20 + Math.cos(frame * 0.13) * 12;
+          const ph = 120 + Math.cos(frame * 0.10) * 14 + Math.sin(frame * 0.17) * 8;
+          // Flickering opacity
+          const alpha = 0.04 + Math.sin(frame * 0.11) * 0.012;
+
+          el.style.background = `radial-gradient(ellipse ${pw}px ${ph}px at ${s.x + jx}px ${s.y + jy}px, rgba(255,255,255,${alpha}) 0%, transparent 70%)`;
+        } else {
+          el.style.background = "transparent";
+        }
+      }
+      rafId.current = requestAnimationFrame(tick);
+    }
+    tick();
+    return () => { alive = false; cancelAnimationFrame(rafId.current); };
+  }, []);
+
+  const handleMove = useCallback((e: React.MouseEvent | React.TouchEvent) => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const rect = section.getBoundingClientRect();
+    let clientX: number, clientY: number;
+
+    if ("touches" in e) {
+      if (!e.touches[0]) return;
+      clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
+    } else {
+      clientX = e.clientX;
+      clientY = e.clientY;
+    }
+
+    mousePos.current = { x: clientX - rect.left, y: clientY - rect.top };
+    visible.current = true;
+  }, []);
+
+  const handleLeave = useCallback(() => {
+    visible.current = false;
+  }, []);
+
   const words = tx.title.split(" ");
 
   return (
     <section
+      ref={sectionRef}
       className="relative min-h-screen flex flex-col overflow-hidden"
-      style={{ background: "#04060f" }}>
+      style={{ background: "#04060f" }}
+      onMouseMove={handleMove}
+      onTouchMove={handleMove}
+      onMouseLeave={handleLeave}>
 
       <StarField />
+
+      {/* Soft glow that follows cursor — no visible shape */}
+      <div
+        ref={glowRef}
+        className="absolute inset-0 pointer-events-none"
+        style={{ zIndex: 1, transition: "background 0.4s ease" }}
+      />
 
       {/* Vignette */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 1,
@@ -67,7 +143,7 @@ export default function Hero() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight mb-6"
             style={{ letterSpacing: "-0.025em" }}>
             {words.map((word, i) => {
-              const isGold = word === "Dijital" || word === "Digital";
+              const isGold = word === "Dijitalde" || word === "Visible" || word === "Digital";
               const isAmp  = word === "&";
               return (
                 <span key={`${lang}-${i}`}

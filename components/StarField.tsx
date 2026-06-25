@@ -14,7 +14,7 @@ void main() {
   vec4  mv    = modelViewMatrix * vec4(position, 1.0);
   float depth = -mv.z;
   vNear = 1.0 - clamp((depth - 20.0) / 1300.0, 0.0, 1.0);
-  gl_PointSize = clamp(aSize * 290.0 / depth, 0.3, 14.0);
+  gl_PointSize = clamp(aSize * 380.0 / depth, 0.6, 22.0);
   gl_Position  = projectionMatrix * mv;
 }
 `;
@@ -30,11 +30,11 @@ void main() {
   float core = 1.0 - smoothstep(0.0,  0.16, dist);
   float glow = pow(1.0 - smoothstep(0.16, 0.5, dist), 2.0);
 
-  float a = core + glow * 0.5 * vNear;
-  if (a < 0.006) discard;
+  float a = core + glow * 0.7 * vNear;
+  if (a < 0.004) discard;
 
-  vec3 c = vColor + vec3(0.07, 0.10, 0.20) * core * vNear;
-  gl_FragColor = vec4(c, a * (0.32 + vNear * 0.68));
+  vec3 c = vColor + vec3(0.10, 0.14, 0.28) * core * vNear;
+  gl_FragColor = vec4(c, a * (0.50 + vNear * 0.50));
 }
 `;
 
@@ -76,7 +76,7 @@ export default function StarField() {
       } else {
         col[i*3] = b; col[i*3+1] = b*0.92; col[i*3+2] = b*0.70;
       }
-      sizes[i] = rnd(1.5, 5.0);
+      sizes[i] = rnd(3.0, 9.0);
     }
 
     for (let i = 0; i < N; i++) spawn(i);

@@ -16,26 +16,27 @@ export const metadata: Metadata = {
 
   /* ── Temel ── */
   title: {
-    default: "Aleyna Aytürk Korkmaz — CRM Danışmanı & Dijital Çözüm Uzmanı",
+    default: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözüm Uzmanı | Antalya",
     template: "%s | Aleyna Aytürk Korkmaz",
   },
   description:
-    "HubSpot, Salesforce, Zoho CRM kurulum & yönetimi. Web sitesi geliştirme, Zapier/Make otomasyon entegrasyonu. Uzaktan, global dijital danışmanlık hizmetleri.",
+    "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi dijitalde görünür yapıyorum.",
   keywords: [
-    "CRM danışmanı",
-    "HubSpot kurulum",
-    "Salesforce danışmanlık",
-    "Zoho CRM",
-    "dijital dönüşüm",
-    "otomasyon entegrasyonu",
-    "Zapier danışmanı",
-    "Make entegrasyon",
-    "web sitesi geliştirme",
-    "dijital çözüm uzmanı",
-    "CRM consultant Turkey",
-    "digital transformation consultant",
-    "remote CRM consultant",
+    "SEO Antalya",
+    "GEO hizmeti",
+    "generative engine optimization",
+    "CRM kurulum Antalya",
+    "dijital klon",
+    "web sitesi Antalya",
+    "dijital görünürlük",
+    "Google Business Profile",
+    "ChatGPT görünürlük",
+    "yerel SEO",
+    "yapay zeka görünürlük",
+    "dijital danışmanlık Antalya",
     "Aleyna Aytürk Korkmaz",
+    "SEO danışmanı Antalya",
+    "web geliştirme Antalya",
   ],
   authors: [{ name: "Aleyna Aytürk Korkmaz", url: BASE_URL }],
   creator: "Aleyna Aytürk Korkmaz",
@@ -56,9 +57,9 @@ export const metadata: Metadata = {
     type: "website",
     url: BASE_URL,
     siteName: "Aleyna Aytürk Korkmaz",
-    title: "Aleyna Aytürk Korkmaz — CRM Danışmanı & Dijital Çözüm Uzmanı",
+    title: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözüm Uzmanı | Antalya",
     description:
-      "CRM kurulum, web geliştirme ve otomasyon entegrasyonu. Uzaktan, global dijital danışmanlık.",
+      "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi dijitalde görünür yapıyorum.",
     locale: "tr_TR",
     alternateLocale: "en_US",
     images: [
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Aleyna Aytürk Korkmaz — CRM Danışmanı & Dijital Çözüm Uzmanı",
+        alt: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözüm Uzmanı | Antalya",
       },
     ],
   },
@@ -74,9 +75,9 @@ export const metadata: Metadata = {
   /* ── Twitter / X ── */
   twitter: {
     card: "summary_large_image",
-    title: "Aleyna Aytürk Korkmaz — CRM Danışmanı & Dijital Çözüm Uzmanı",
+    title: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözüm Uzmanı | Antalya",
     description:
-      "CRM kurulum, web geliştirme ve otomasyon entegrasyonu. Uzaktan, global dijital danışmanlık.",
+      "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi dijitalde görünür yapıyorum.",
     images: [`${BASE_URL}/og-image.png`],
   },
 
@@ -108,9 +109,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* ── GEO meta tags ── */}
         <meta name="geo.region"      content="TR" />
-        <meta name="geo.placename"   content="Türkiye" />
-        <meta name="geo.position"    content="39.925533;32.866287" />
-        <meta name="ICBM"            content="39.925533, 32.866287" />
+        <meta name="geo.placename"   content="Antalya, Türkiye" />
+        <meta name="geo.position"    content="36.8969;30.7133" />
+        <meta name="ICBM"            content="36.8969, 30.7133" />
         <meta name="language"        content="Turkish, English" />
         <meta name="revisit-after"   content="7 days" />
         <meta name="rating"          content="general" />

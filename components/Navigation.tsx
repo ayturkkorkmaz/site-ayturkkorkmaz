@@ -4,10 +4,12 @@ import { useLang } from "@/lib/LangContext";
 import { t } from "@/lib/translations";
 
 const serviceLinks = [
-  { labelTr: "SEO", labelEn: "SEO", href: "/hizmetler/seo" },
-  { labelTr: "GEO", labelEn: "GEO", href: "/hizmetler/geo" },
-  { labelTr: "AI Otomasyon", labelEn: "AI Automation", href: "/hizmetler/ai-otomasyon" },
+  { labelTr: "SEO & GEO", labelEn: "SEO & GEO", href: "/hizmetler/seo-geo" },
+  { labelTr: "CRM Sistemleri", labelEn: "CRM Systems", href: "/hizmetler/crm" },
+  { labelTr: "Dijital Klon", labelEn: "Digital Clone", href: "/hizmetler/dijital-klon" },
+  { labelTr: "Kişisel Asistan", labelEn: "Personal Assistant", href: "/hizmetler/kisisel-asistan" },
   { labelTr: "Web Geliştirme", labelEn: "Web Dev", href: "/hizmetler/web-gelistirme" },
+  { labelTr: "Dijital Görünürlük", labelEn: "Digital Visibility", href: "/hizmetler/dijital-gorunurluk" },
 ];
 
 export default function Navigation() {

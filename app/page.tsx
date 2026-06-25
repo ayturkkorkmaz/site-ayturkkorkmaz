@@ -16,23 +16,31 @@ const jsonLd = {
       name: "Aleyna Aytürk Korkmaz",
       url: "https://ayturkkorkmaz.com.tr",
       email: "ayturkkorkmazz@gmail.com",
-      jobTitle: "CRM Danışmanı & Dijital Çözüm Uzmanı",
+      jobTitle: "SEO, GEO & Dijital Çözüm Uzmanı",
       description:
-        "CRM kurulum & yönetim, web sitesi geliştirme ve otomasyon entegrasyonu konularında uzaktan, global hizmet sunan dijital danışman.",
+        "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri sunan dijital uzman.",
       knowsAbout: [
+        "SEO",
+        "GEO",
+        "Generative Engine Optimization",
         "CRM Systems",
         "HubSpot",
         "Salesforce",
         "Zoho CRM",
-        "Digital Transformation",
-        "Workflow Automation",
-        "Zapier",
-        "Make (Integromat)",
+        "Digital Clone",
+        "AI Chatbot",
         "Web Development",
         "Next.js",
-        "API Integration",
+        "Digital Visibility",
+        "Google Business Profile",
+        "Schema Markup",
       ],
       knowsLanguage: ["tr", "en"],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Antalya",
+        addressCountry: "TR",
+      },
       sameAs: [
         "https://www.linkedin.com/in/aleynaayt%C3%BCrkkorkmaz",
       ],
@@ -41,14 +49,18 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": "https://ayturkkorkmaz.com.tr/#service",
-      name: "Aleyna Aytürk Korkmaz — Dijital Danışmanlık",
+      name: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözümler",
       url: "https://ayturkkorkmaz.com.tr",
       email: "ayturkkorkmazz@gmail.com",
       description:
-        "CRM kurulum & yönetim, web sitesi geliştirme, otomasyon ve API entegrasyonu, dijital dönüşüm danışmanlığı.",
+        "Antalya'da SEO & GEO hizmetleri, CRM kurulum, dijital klon, web geliştirme ve dijital görünürlük çözümleri.",
       areaServed: {
-        "@type": "Place",
-        name: "Worldwide",
+        "@type": "City",
+        name: "Antalya",
+        containedInPlace: {
+          "@type": "Country",
+          name: "Turkey",
+        },
       },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
@@ -58,36 +70,54 @@ const jsonLd = {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "CRM Kurulum & Yönetim",
+              name: "SEO & GEO Hizmetleri",
               description:
-                "HubSpot, Salesforce, Zoho ve diğer CRM sistemlerinin kurulum, özelleştirme ve optimizasyonu.",
+                "Google ve yapay zeka arama motorlarında görünürlük optimizasyonu. Teknik SEO, yerel SEO ve GEO.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Web Sitesi Tasarım & Geliştirme",
+              name: "CRM Sistemleri",
               description:
-                "Kurumsal web siteleri ve landing page'ler. Hızlı, mobil uyumlu ve SEO-ready.",
+                "HubSpot, Salesforce, Zoho CRM kurulum, özelleştirme ve optimizasyonu.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Otomasyon & Entegrasyon",
+              name: "Dijital Klon",
               description:
-                "Zapier ve Make ile iş akışı otomasyonu. Sistemler arası API entegrasyonları.",
+                "Markanızın sesini ve değerlerini yansıtan yapay zeka destekli dijital temsilci oluşturma.",
             },
           },
           {
             "@type": "Offer",
             itemOffered: {
               "@type": "Service",
-              name: "Dijital Danışmanlık",
+              name: "Kişisel Asistan",
               description:
-                "Dijital dönüşüm stratejisi, süreç analizi, teknoloji seçimi ve roadmap oluşturma.",
+                "AI destekli kişisel asistan kurulumu. Takvim yönetimi, e-posta takibi ve görev organizasyonu.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Web Sitesi Geliştirme",
+              description:
+                "Hızlı, modern, SEO/GEO uyumlu kurumsal web siteleri.",
+            },
+          },
+          {
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: "Dijital Görünürlük",
+              description:
+                "Google Business Profile, online itibar yönetimi ve dijital varlık güçlendirme.",
             },
           },
         ],
@@ -100,9 +130,41 @@ const jsonLd = {
       "@id": "https://ayturkkorkmaz.com.tr/#website",
       url: "https://ayturkkorkmaz.com.tr",
       name: "Aleyna Aytürk Korkmaz",
-      description: "CRM Danışmanı & Dijital Çözüm Uzmanı",
+      description: "SEO, GEO & Dijital Çözüm Uzmanı — Antalya",
       inLanguage: ["tr-TR", "en-US"],
       publisher: { "@id": "https://ayturkkorkmaz.com.tr/#person" },
+    },
+    /* ── LocalBusiness ── */
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ayturkkorkmaz.com.tr/#localbusiness",
+      name: "Aleyna Aytürk Korkmaz — Dijital Çözümler",
+      description:
+        "Antalya'da SEO, GEO, CRM, dijital klon, web geliştirme ve dijital görünürlük hizmetleri.",
+      url: "https://ayturkkorkmaz.com.tr",
+      email: "ayturkkorkmazz@gmail.com",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Antalya",
+        addressRegion: "Antalya",
+        addressCountry: "TR",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 36.8969,
+        longitude: 30.7133,
+      },
+      areaServed: {
+        "@type": "City",
+        name: "Antalya",
+      },
+      priceRange: "$$",
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
     },
   ],
 };

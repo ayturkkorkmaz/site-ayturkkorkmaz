@@ -66,6 +66,66 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
+      url: `${BASE_URL}/hizmetler/seo-geo`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          tr: `${BASE_URL}/hizmetler/seo-geo`,
+          en: `${BASE_URL}/en/hizmetler/seo-geo`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/hizmetler/crm`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          tr: `${BASE_URL}/hizmetler/crm`,
+          en: `${BASE_URL}/en/hizmetler/crm`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/hizmetler/dijital-klon`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          tr: `${BASE_URL}/hizmetler/dijital-klon`,
+          en: `${BASE_URL}/en/hizmetler/dijital-klon`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/hizmetler/kisisel-asistan`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          tr: `${BASE_URL}/hizmetler/kisisel-asistan`,
+          en: `${BASE_URL}/en/hizmetler/kisisel-asistan`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/hizmetler/dijital-gorunurluk`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          tr: `${BASE_URL}/hizmetler/dijital-gorunurluk`,
+          en: `${BASE_URL}/en/hizmetler/dijital-gorunurluk`,
+        },
+      },
+    },
+    {
       url: `${BASE_URL}/sss`,
       lastModified: new Date(),
       changeFrequency: "monthly",
