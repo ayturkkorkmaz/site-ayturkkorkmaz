@@ -11,7 +11,7 @@ export const t = {
     },
     hero: {
       name: "Aleyna Aytürk Korkmaz",
-      title: "İşletmenizi Dijitalde Görünür Yapıyorum",
+      title: "İşletmenizi Uçtan Uca Dijitalleştiriyorum",
       tagline: "SEO & GEO, CRM sistemleri, dijital klon ve web çözümleri — Antalya'da, yüz yüze.",
       cta1: "15dk Ücretsiz Görüşme",
       cta2: "Hizmetleri Gör",
@@ -677,7 +677,7 @@ export const t = {
     },
     hero: {
       name: "Aleyna Aytürk Korkmaz",
-      title: "I Make Your Business Visible in the Digital World",
+      title: "I Digitalize Your Business End to End",
       tagline: "SEO & GEO, CRM systems, digital clone, and web solutions — in Antalya, face to face.",
       cta1: "15min Free Call",
       cta2: "See Services",

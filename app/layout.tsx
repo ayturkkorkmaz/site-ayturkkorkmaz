@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | Aleyna Aytürk Korkmaz",
   },
   description:
-    "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi dijitalde görünür yapıyorum.",
+    "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi uçtan uca dijitalleştiriyorum.",
   keywords: [
     "SEO Antalya",
     "GEO hizmeti",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     siteName: "Aleyna Aytürk Korkmaz",
     title: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözüm Uzmanı | Antalya",
     description:
-      "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi dijitalde görünür yapıyorum.",
+      "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi uçtan uca dijitalleştiriyorum.",
     locale: "tr_TR",
     alternateLocale: "en_US",
     images: [
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Aleyna Aytürk Korkmaz — SEO, GEO & Dijital Çözüm Uzmanı | Antalya",
     description:
-      "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi dijitalde görünür yapıyorum.",
+      "Antalya'da SEO & GEO hizmetleri, CRM sistemleri, dijital klon, web sitesi geliştirme ve dijital görünürlük çözümleri. İşletmenizi uçtan uca dijitalleştiriyorum.",
     images: [`${BASE_URL}/opengraph-image`],
   },
 
